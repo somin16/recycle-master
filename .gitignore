@@ -1,17 +1,61 @@
-# Node (Frontend)
-frontend/node_modules/
-frontend/.expo/
+# === 환경 변수 및 비밀번호 (최우선!!) ===
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
 
-# Python (Backend)
-backend/venv/
-backend/__pycache__/
-backend/.env
+# === 의존성 파일 (용량이 커서 절대 올리면 안 됨) ===
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+build/
+dist/
 
-# AI (Model Files - 용량이 커서 별도 관리 권장)
-ai/*.h5
-ai/*.pt
-ai/*.pkl
+# === 프론트엔드 (Expo / React Native) ===
+.expo/
+*.jks
+*.p12
+*.apk
+*.aab
+*.ipa
+.xcode.env
 
-# OS
+# === 백엔드 (Python / FastAPI) ===
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.db
+*.sqlite3
+
+# === OS 및 에디터 설정 (팀원마다 다를 수 있음) ===
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# === 로그 및 임시 파일 ===
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# Node (Frontend)
+*node_modules/
+*.expo/
+
+# AI (Model Files - 용량이 커서 별도 관리 권장)
+*.h5
+*.pt
+*.pkl
