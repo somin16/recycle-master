@@ -59,3 +59,6 @@ yarn-error.log*
 *.h5
 *.pt
 *.pkl
+
+# 데이터셋 
+data/
