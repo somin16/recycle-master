@@ -1,0 +1,17 @@
+# 🌟 [팀원 필독] 개인 컴퓨터의 절대 경로(C:\Users\...)를 지우고 '상대 경로'로 통일했습니다.
+# 이 yaml 파일이 위치한 폴더(dataset)를 기준으로 삼기 때문에, 팀원 누구든 주소 수정 없이 바로 실행 가능합니다.
+
+train: ./train/images  # 학습(Train)에 사용할 원본 이미지들이 모여있는 폴더 경로
+val: ./valid/images    # 검증(Validation)에 사용할 원본 이미지들이 모여있는 폴더 경로
+test: ./test/images    # 테스트(Test)에 사용할 원본 이미지들이 모여있는 폴더 경로
+
+nc: 7  # 전체 쓰레기 카테고리(클래스)의 총 개수
+names: ['battery', 'can', 'glass', 'metal', 'paper', 'plastic', 'vinyl']  # 인덱스 순서대로 매칭되는 쓰레기 종류 이름들
+
+# 아래는 Roboflow 데이터셋 다운로드 시 자동으로 생성된 고유 출처 정보입니다. (학습 코드 동작에는 영향을 주지 않음)
+roboflow:
+  workspace: s-workspace-ke5ze  # 로보플로우 작업 공간 이름
+  project: korean_trash_detection  # 프로젝트명
+  version: 2  # 데이터셋 버전 번호
+  license: CC BY 4.0  # 데이터셋 라이선스 규격
+  url: https://universe.roboflow.com/s-workspace-ke5ze/korean_trash_detection/dataset/2  # 원본 데이터셋 웹 주소
