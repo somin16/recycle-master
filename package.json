@@ -1,0 +1,26 @@
+{
+  "name": "recycle-master",
+  "version": "1.0.0",
+  "scripts": {
+    "// --- 통합 실행 --- //": "",
+    "모두실행": "concurrently \"npm run BE실행\" \"npm run FE실행\"",
+    "개발": "concurrently \"npm run BE실행\" \"npm run FE실행\"",
+
+    "// --- 프론트엔드 (React Native) --- //": "",
+    "FE실행": "cd frontend && npx expo start",
+    "FE설치": "cd frontend && npm install",
+
+    "// --- 백엔드 (FastAPI) --- //": "",
+    "// 가상환경 내부의 uvicorn을 직접 실행하도록 경로 수정 //": "",
+    "BE실행": "cd backend && .\\venv\\Scripts\\python -m uvicorn main:app --reload",
+    "BE설치": "cd backend && .\\venv\\Scripts\\pip install -r requirements.txt",
+    "의존성추출": "cd backend && .\\venv\\Scripts\\pip freeze > requirements.txt",
+
+    "// --- 초기 설정 및 청소 --- //": "",
+    "셋업": "git config --local commit.template .gitmessage.txt && npm install && npm run FE설치",
+    "초기화": "cd frontend && rm -rf node_modules && npm run FE설치"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
